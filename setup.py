@@ -3,43 +3,47 @@
 import subprocess
 import sys
 
+def run_cmd(cmd, is_verbose):
+    if v: print(command)
+    subprocess.call([cmd], shell=True)
 
 def move_files(v):
     command = "cp bash_aliases ~/.bash_aliases"
-    if v:
-        print(command)
-    subprocess.call([command], shell=True)
+    run_cmd(command, v)
 
     command = "cp bash_functions ~/.bash_functions"
-    if v:
-        print(command)
-    subprocess.call([command], shell=True)
+    run_cmd(command, v)
 
     command = "cp vimrc ~/.vimrc"
-    if v:
-        print(command)
-    subprocess.call([command], shell=True)
+    run_cmd(command, v)
 
     command = "cp -r vim ~/.vim"
-    if v:
-        print(command)
-    subprocess.call([command], shell=True)
+    run_cmd(command, v)
+
+def linkage():
+    brc = open("../.bashrc", 'a')
+    brc.write(". mybash/linkage \n")
+    brc.write("export TERM='xterm-256color'\n")
+    brc.write("PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]../\W\[\033[00m\]\$ '\n")
 
 
 print("Running Setup Script...")
 args = sys.argv
 verbose = False
 
-if len(args) > 1 and args[1] == '-v':
+if '-v' or '--verbose' in args:
     verbose = True
 
 move_files(verbose)
 
-brc = open("../.bashrc", 'a')
-brc.write(". ~/.bash_aliases")
-brc.write(". ~/.bash_func")
-brc.write("export TERM='xterm-256color'")
-brc.write("PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]../\W\[\033[00m\]\$ '")
+if '-i' or '--initial' in args:
+    linkage()
+
+
+
+
+
+
 
 
 
