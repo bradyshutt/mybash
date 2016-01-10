@@ -3,9 +3,9 @@
 import subprocess
 import sys
 
-def run_cmd(cmd, is_verbose):
+def run_cmd(command, is_verbose):
     if is_verbose: print(command)
-    subprocess.call([cmd], shell=True)
+    subprocess.call([command], shell=True)
 
 def move_files(v):
     command = "cp bash_aliases ~/.bash_aliases"
