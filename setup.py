@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 import subprocess
+import os
 import sys
+
 
 def run_cmd(command, is_verbose=False):
     if is_verbose: 
@@ -40,7 +42,7 @@ if '-v' in args or '--verbose' in args:
 if '-i' in args or '--initial' in args:
     linkage()
 
-run_cmd("source ~/.bashrc", is_verbose=verbose)
+os.system("source ~/.bashrc")
 
 
 
