@@ -4,7 +4,8 @@ import subprocess
 import sys
 
 def run_cmd(command, is_verbose):
-    if is_verbose: print(command)
+    if is_verbose: 
+        print(command)
     subprocess.call([command], shell=True)
 
 def move_files(v):
@@ -22,9 +23,9 @@ def move_files(v):
 
 def linkage():
     brc = open("../.bashrc", 'a')
-    brc.write(". mybash/linkage \n")
-    brc.write("export TERM='xterm-256color'\n")
-    brc.write("PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]../\W\[\033[00m\]\$ '\n")
+    brc.write("\n. mybash/linkage \n")
+    brc.write("\nexport TERM='xterm-256color'\n")
+    brc.write("\nPS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]../\W\[\033[00m\]\$ '\n")
 
 
 print("Running Setup Script...")
