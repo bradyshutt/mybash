@@ -42,7 +42,6 @@ if '-v' in args or '--verbose' in args:
 if '-i' in args or '--initial' in args:
     linkage()
 
-os.system("source ~/.bashrc")
 
 
 
