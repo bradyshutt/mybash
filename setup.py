@@ -5,6 +5,7 @@ import sys
 
 verbose = True
 
+ok
 def run_cmd(command):
     if verbose: 
         print("Running command: \n " + command)
