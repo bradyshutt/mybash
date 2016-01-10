@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 def run_cmd(cmd, is_verbose):
-    if v: print(command)
+    if is_verbose: print(command)
     subprocess.call([cmd], shell=True)
 
 def move_files(v):
