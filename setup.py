@@ -26,7 +26,7 @@ if '-i' in args or '--initial' in args:
     linkage()
 
 
-run_cmd("source ~/.bashrc", shell=True)
+run_cmd("source ~/.bashrc", True)
 
 
 
