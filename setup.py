@@ -35,8 +35,10 @@ def setup_vim():
     if verbose: 
         print("Setting up vim...")
     try:
-        run_cmd("rm -rfI ~/.vim")
+        run_cmd("rm -rf ~/.vim")
+        run_cmd("rm -fI ~/.vimrc")
         run_cmd("cp -r vim ~/.vim")
+        run_cmd("cp vimrc ~/.vimrc")
     except:
         print("Error, you probably need su privilages")
         exit()

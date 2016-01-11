@@ -22,7 +22,7 @@ Plugin 'honza/vim-snippets'    "For Snipmate
 Plugin 'https://github.com/haya14busa/incsearch.vim'  "Better Inc Search
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'https://github.com/jgdavey/tslime.vim.git'
 Plugin 'https://github.com/tpope/vim-surround.git'
@@ -32,6 +32,8 @@ Plugin 'https://github.com/benmills/vimux.git'
 Plugin 'gcmt/taboo.vim.git'
 Plugin 'guns/xterm-color-table.vim.git' 
 Plugin 'tpope/vim-vinegar'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 "==ENDFOLD== PLUGINS 
 
 call vundle#end()
