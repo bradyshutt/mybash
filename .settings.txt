@@ -1,0 +1,6 @@
+test:True
+second:False
+setup_vim:done
+linkage:
+check_settings:
+exit:done
